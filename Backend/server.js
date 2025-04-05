@@ -10,7 +10,7 @@ const app=express()
 const PORT=4000;
 const __dirname=path.resolve();
 app.use(cors({
-    origin: "http://localhost:5173", // Replace with your frontend URL
+     // Replace with your frontend URL
     methods: "GET,POST,PUT,DELETE",
     allowedHeaders: "Content-Type,Authorization"
 })); 
