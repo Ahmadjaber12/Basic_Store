@@ -9,11 +9,7 @@ dotenv.config()
 const app=express()
 const PORT=4000;
 const __dirname=path.resolve();
-app.use(cors({
-     // Replace with your frontend URL
-    methods: "GET,POST,PUT,DELETE",
-    allowedHeaders: "Content-Type,Authorization"
-})); 
+app.use(cors()); 
 app.use(express.json());
 app.use(productRouter);
 app.use(express.static(path.join(__dirname,"/Frontend/dist")))
