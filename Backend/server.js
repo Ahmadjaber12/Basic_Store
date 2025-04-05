@@ -11,7 +11,12 @@ const PORT=4000;
 const __dirname=path.resolve();
 app.use(cors({
     origin: "*", // Replace with your frontend URL
-    methods: "GET,POST,PUT,DELETE",
+    methods: [
+        'GET',
+        'POST',
+        'DELETE',
+        'PUT'
+      ],
     allowedHeaders: "Content-Type,Authorization"
 })); 
 app.use(express.json());
